@@ -110,7 +110,7 @@ if st.button("Predict"):
     try:
         
         # heart_df = pd.read_csv('../data/heart_disease.csv')
-        heart_df = pd.read_csv(project_root, 'data', 'heart_disease.csv'))
+        heart_df = pd.read_csv(os.path.join(project_root, 'data', 'heart_disease.csv'))
 
         compare_features= ['age', 'thalach', 'chol', 'trestbps', 'oldpeak']
         
