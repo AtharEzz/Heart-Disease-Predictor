@@ -1,5 +1,6 @@
 import streamlit as st 
 import pandas as pd
+import os
 import joblib
 import plotly.graph_objects as go
 
@@ -85,9 +86,18 @@ input_raw = pd.DataFrame([{
 
 
 # X_train, X_test, y_train, y_test, scaler, final_features = preprocess_df(input_raw)
-model = joblib.load('../models/final_model.pkl')
-scaler = joblib.load('../models/scaler.pkl')           
-final_features = joblib.load('../models/final_features.pkl')  
+
+# Get the absolute path to the project root
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Load models using absolute paths
+model = joblib.load(os.path.join(project_root, 'models', 'final_model.pkl'))
+scaler = joblib.load(os.path.join(project_root, 'models', 'scaler.pkl'))
+final_features = joblib.load(os.path.join(project_root, 'models', 'final_features.pkl'))
+
+# model = joblib.load('../models/final_model.pkl')
+# scaler = joblib.load('../models/scaler.pkl')           
+# final_features = joblib.load('../models/final_features.pkl')  
 
 
 X_final = preprocess_single_input(input_raw, scaler, final_features)
