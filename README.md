@@ -27,8 +27,7 @@ The Random Forest with randomized hyperparameter search achieved the highest AUC
 
 An interactive Streamlit app is deployed publicly, allowing users to input clinical values and receive an instant heart disease risk prediction.
 
-**App:** [Heart Disease Predictor on Streamlit Cloud]([https://your-streamlit-url-here](https://heart-disease-predictor-udacnzdexe5owihe5lkxd4.streamlit.app/))])
-
+**App:** [Heart Disease Predictor on Streamlit Cloud](https://heart-disease-predictor-udacnzdexe5owihe5lkxd4.streamlit.app/)
 ---
 
 ## Dataset
